@@ -1,0 +1,6 @@
+[package]
+name = "short_long"
+version = "0.1.0"
+
+[lib]
+crate-type = ["dylib"]

@@ -12,7 +12,7 @@ example = ""
 
 with open("formalSentences.txt",encoding="utf8") as f:
     for line in f:
-        example = example + line
+        example += line
 
 #PRINT RESULT
 print("With Rust: ")

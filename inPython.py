@@ -2,10 +2,7 @@ import timeit
 def shortLong(string):
     split = string.split()
     split = [i for i in split if (i != "the") & (i != "a")]
-    l = 0
-    for i in split:
-        if len(i) > 8:
-            l += 1
+    l = sum(len(i) > 8 for i in split)
     return l / len(split)
 
 
@@ -13,7 +10,7 @@ def shortLong(string):
 example = ""
 with open("formalSentences.txt",encoding="utf8") as f:
     for line in f:
-        example = example + line
+        example += line
 
 #PRINT RESULT
 print("Pure Python: ")
